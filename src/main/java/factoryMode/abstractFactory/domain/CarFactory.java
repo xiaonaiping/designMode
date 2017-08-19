@@ -10,36 +10,3 @@ public interface CarFactory {
 
     Seat createSeat();
 }
-class HighCarFactory implements CarFactory{
-
-    @Override
-    public Engineer createEngineer() {
-        return new HighEngineer();
-    }
-
-    @Override
-    public Tyre createTyre() {
-        return new HighTyre();
-    }
-
-    @Override
-    public Seat createSeat() {
-        return new HighSeat();
-    }
-}
-class lowerCarFactory implements CarFactory{
-    @Override
-    public Engineer createEngineer() {
-        return new LowerEngineer();
-    }
-
-    @Override
-    public Tyre createTyre() {
-        return new lowerTyre();
-    }
-
-    @Override
-    public Seat createSeat() {
-        return new LowerSeat();
-    }
-}
