@@ -2,6 +2,7 @@ package factoryMode.abstractFactory;
 
 import factoryMode.abstractFactory.domain.CarFactory;
 import factoryMode.abstractFactory.domain.Engineer;
+import factoryMode.abstractFactory.domain.HighCarFactory;
 import factoryMode.abstractFactory.domain.HighEngineer;
 
 /**
@@ -9,7 +10,8 @@ import factoryMode.abstractFactory.domain.HighEngineer;
  */
 public class client1 {
     public static void main(String[] args) {
-        Engineer highEngineer = new HighEngineer();
+        CarFactory highCarFactory = new HighCarFactory();
+        Engineer highEngineer = highCarFactory.createEngineer();
         highEngineer.run();
         highEngineer.start();
     }
