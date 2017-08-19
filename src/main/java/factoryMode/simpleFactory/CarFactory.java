@@ -1,8 +1,8 @@
 package factoryMode.simpleFactory;
 
-import factoryMode.domain.AudiCar;
-import factoryMode.domain.BydCar;
-import factoryMode.domain.Car;
+import factoryMode.simpleFactory.domain.AudiCar;
+import factoryMode.simpleFactory.domain.BydCar;
+import factoryMode.simpleFactory.domain.Car;
 
 /**
  * Created by wangxc on 2017/8/19 13:49.

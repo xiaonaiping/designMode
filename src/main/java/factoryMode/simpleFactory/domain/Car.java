@@ -1,4 +1,4 @@
-package factoryMode.domain;
+package factoryMode.simpleFactory.domain;
 
 /**
  * Created by wangxc on 2017/8/19 13:12.
