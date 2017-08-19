@@ -22,6 +22,7 @@ public class Client3 {
                 }
                 countDownLatch.countDown();
             }).start();
+
         }while(++i<10);
         countDownLatch.await();
         stopwatch.stop();
