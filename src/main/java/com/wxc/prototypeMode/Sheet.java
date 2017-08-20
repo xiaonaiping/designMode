@@ -1,11 +1,12 @@
 package com.wxc.prototypeMode;
 
+import java.io.Serializable;
 import java.util.Date;
 
 /**
  * Created by wangxc on 2017/8/20 19:43.
  */
-public class Sheet implements Cloneable{//纪念多利，克隆羊(*╹▽╹*)
+public class Sheet implements Cloneable,Serializable{//纪念多利，克隆羊(*╹▽╹*)
     private String name;
     private Date birthday;
 
