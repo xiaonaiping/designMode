@@ -9,7 +9,7 @@ import java.util.Date;
 public class Client1 {
     public static void main(String[] args) throws Exception {
         Date date = new Date();
-        Sheet sheet = new Sheet("少利",date);
+        Sheet sheet = new Sheet("少利", date);
         System.out.println(sheet);
         System.out.println(sheet.getName());
         System.out.println(sheet.getBirthday());

@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * Created by wangxc on 2017/8/20 19:43.
  */
-public class Sheet implements Cloneable,Serializable{//纪念多利，克隆羊(*╹▽╹*)
+public class Sheet implements Cloneable, Serializable {//纪念多利，克隆羊(*╹▽╹*)
     private String name;
     private Date birthday;
 
@@ -36,12 +36,13 @@ public class Sheet implements Cloneable,Serializable{//纪念多利，克隆羊(
 
     /**
      * 克隆方法，重写object的clone方法
+     *
      * @return
      * @throws CloneNotSupportedException
      */
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        Object obj=super.clone();
+        Object obj = super.clone();
         //添加下面代码实现深复制---start
        /* Sheet s= (Sheet) obj;
         s.birthday= (Date) this.birthday.clone();*/

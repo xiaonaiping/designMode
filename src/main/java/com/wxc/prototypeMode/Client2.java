@@ -1,9 +1,6 @@
 package com.wxc.prototypeMode;
 
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
+import java.io.*;
 import java.util.Date;
 
 /**
@@ -13,19 +10,20 @@ import java.util.Date;
 public class Client2 {
     public static void main(String[] args) throws Exception {
         Date date = new Date();
-        Sheet sheet = new Sheet("少利",date);
+        Sheet sheet = new Sheet("少利", date);
         System.out.println(sheet);
         System.out.println(sheet.getName());
         System.out.println(sheet.getBirthday());
 //        Sheet clone = (Sheet) sheet.clone();
         //使用序列化反序列化实现深克隆
-        FileOutputStream fos=new FileOutputStream("d:\\sheet");
-        ObjectOutputStream oos=new ObjectOutputStream(fos);
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        ObjectOutputStream oos = new ObjectOutputStream(bos);
         oos.writeObject(sheet);
+        byte[] bytes = bos.toByteArray();
         oos.close();
-        fos.close();
-        FileInputStream fis=new FileInputStream("d:\\sheet");
-        ObjectInputStream ois=new ObjectInputStream(fis);
+        bos.close();
+        ByteArrayInputStream fis = new ByteArrayInputStream(bytes);
+        ObjectInputStream ois = new ObjectInputStream(fis);
         Sheet clone = (Sheet) ois.readObject();
         ois.close();
         fis.close();
